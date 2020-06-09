@@ -1,0 +1,16 @@
+{
+  "name": "HY_9010_T",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/Release/factoryInterface",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild  --target=8.2.3  --arch=x64 --dist-url=https://electronjs.org/headers"
+  },
+  "author": "cui_sh",
+  "license": "ISC",
+  "gypfile": true,
+  "dependencies": {
+    "nan": "^2.14.0"
+  }
+}

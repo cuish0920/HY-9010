@@ -1,0 +1,62 @@
+# PatternLayout supports following set of format characters:
+# %% - a single percent sign
+# %c - the category
+# %d - the date\n Date format: The date format character may be followed by
+#    a date format specifier enclosed between braces.
+#    For example, %d{%H:%M:%S,%l} or %d{%d %m %Y %H:%M:%S,%l}.
+#    If no date format specifier is given then the following format is used:
+#    "Wed Jan 02 02:03:55 1980". The date format specifier admits the same syntax
+#    as the ANSI C function strftime, with 1 addition.
+#    The addition is the specifier %l for milliseconds,
+#    padded with zeros to make 3 digits.
+# %m - the message
+# %n - the platform specific line separator
+# %p - the priority
+# %r - milliseconds since this layout was created.
+# %R - seconds since Jan 1, 1970
+# %u - clock ticks since process start
+# %x - the NDC
+# %t - thread name
+# By default, ConversionPattern for PatternLayout is set to "%m%n".
+# Logging levels:  FATAL, ALERT, CRIT, ERROR, WARN, NOTICE, INFO, DEBUG, NOTSET
+# you can set threshold, e.g. log4cpp.appender.rolling.threshold=ERROR
+
+# implog4cpp.property
+
+#-------------------------------------------------------------------------------------
+# root configuration
+#-------------------------------------------------------------------------------------
+log4cpp.rootCategory=ERROR, win32debug, console
+
+#-------------------------------------------------------------------------------------
+# configuration for other categories
+# you can comment or uncomment any of the following categories
+#-------------------------------------------------------------------------------------
+log4cpp.category.IpxImageApi=ERROR, win32debug, rolling
+log4cpp.category.IpxMovieMaker=ERROR, win32debug, rolling
+log4cpp.category.IpxImageSerializer=ERROR, win32debug, rolling
+
+#-------------------------------------------------------------------------------------
+# configure appender "console"
+#-------------------------------------------------------------------------------------
+log4cpp.appender.console=ConsoleAppender
+log4cpp.appender.console.layout=PatternLayout
+log4cpp.appender.console.layout.ConversionPattern=%d | [%6p] | %c | %x: %m%n
+
+#-------------------------------------------------------------------------------------
+# configure appender "win32 debugger (Output)"
+#-------------------------------------------------------------------------------------
+log4cpp.appender.win32debug=Win32DebugAppender
+log4cpp.appender.win32debug.layout=PatternLayout
+log4cpp.appender.win32debug.layout.ConversionPattern=%d | [%6p] | %c | %x: %m%n
+
+#-------------------------------------------------------------------------------------
+# configure appender "rolling log file"
+#-------------------------------------------------------------------------------------
+log4cpp.appender.rolling=RollingFileAppender
+log4cpp.appender.rolling.fileName=ipx_logging.log
+log4cpp.appender.rolling.maxFileSize=10000000		# size in byte
+log4cpp.appender.rolling.maxBackupIndex=1			# keep one backup file
+#log4cpp.appender.rolling.threshold=ERROR
+log4cpp.appender.rolling.layout=PatternLayout
+log4cpp.appender.rolling.layout.ConversionPattern=%d | [%6p] | %c | %x: %m%n

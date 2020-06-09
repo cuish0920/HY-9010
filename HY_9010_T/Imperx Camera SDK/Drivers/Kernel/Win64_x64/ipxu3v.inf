@@ -1,0 +1,177 @@
+[Version]
+Signature="$WINDOWS NT$"
+Class=Image
+ClassGUID={6bdd1fc6-810f-11d0-bec7-08002be2092f}
+provider=%IPXU3_Provider%
+CatalogFile=ipxu3v.cat
+DriverVer=11/16/2017, 1.2.0.1328
+
+[SourceDisksNames]
+1=%IPXU3_Install%,,,
+
+[SourceDisksFiles]
+ipxu3v.sys = 1
+
+[DestinationDirs]
+IpxU3V.Files.Ext = 10,System32\Drivers
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[Manufacturer]
+%IPXU3_Provider%=Device,NT,NTx86,NTamd64
+
+;All platforms
+[Device.NT]
+%VID_2DB2&PID_0000.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0000&MI_00
+%VID_2DB2&PID_0100.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0100&MI_00
+%VID_2DB2&PID_0200.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0200&MI_00
+%VID_2DB2&PID_0300.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0300&MI_00
+%VID_2DB2&PID_0400.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0400&MI_00
+%VID_2DB2&PID_0500.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0500&MI_00
+%VID_2DB2&PID_0600.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0600&MI_00
+%VID_2DB2&PID_0700.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0700&MI_00
+%VID_2DB2&PID_0800.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0800&MI_00
+%VID_2DB2&PID_0900.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0900&MI_00
+%VID_2DB2&PID_FF00.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_FF00&MI_00
+;;%VID_XXXX&PID_XXXX.DeviceDesc%=IpxU3V, USB\VID_XXXX&PID_XXXX
+
+
+;x86 platform
+[Device.NTx86]
+%VID_2DB2&PID_0000.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0000&MI_00
+%VID_2DB2&PID_0100.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0100&MI_00
+%VID_2DB2&PID_0200.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0200&MI_00
+%VID_2DB2&PID_0300.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0300&MI_00
+%VID_2DB2&PID_0400.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0400&MI_00
+%VID_2DB2&PID_0500.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0500&MI_00
+%VID_2DB2&PID_0600.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0600&MI_00
+%VID_2DB2&PID_0700.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0700&MI_00
+%VID_2DB2&PID_0800.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0800&MI_00
+%VID_2DB2&PID_0900.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0900&MI_00
+%VID_2DB2&PID_FF00.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_FF00&MI_00
+;;%VID_XXXX&PID_XXXX.DeviceDesc%=IpxU3V, USB\VID_XXXX&PID_XXXX
+
+
+;x64 platform
+[Device.NTamd64]
+%VID_2DB2&PID_0000.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0000&MI_00
+%VID_2DB2&PID_0100.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0100&MI_00
+%VID_2DB2&PID_0200.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0200&MI_00
+%VID_2DB2&PID_0300.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0300&MI_00
+%VID_2DB2&PID_0400.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0400&MI_00
+%VID_2DB2&PID_0500.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0500&MI_00
+%VID_2DB2&PID_0600.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0600&MI_00
+%VID_2DB2&PID_0700.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0700&MI_00
+%VID_2DB2&PID_0800.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0800&MI_00
+%VID_2DB2&PID_0900.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_0900&MI_00
+%VID_2DB2&PID_FF00.DeviceDesc%=IpxU3V, USB\VID_2DB2&PID_FF00&MI_00
+;;%VID_XXXX&PID_XXXX.DeviceDesc%=IpxU3V, USB\VID_XXXX&PID_XXXX
+
+
+[IpxU3V.NT]
+CopyFiles=IpxU3V.Files.Ext
+AddReg=IpxU3V.AddReg
+
+[IpxU3V.NT.HW]
+AddReg=IpxU3V.AddReg.Guid
+
+[IpxU3V.NT.Services]
+Addservice = IPXU3V,2,IpxU3V.AddService
+
+
+[IpxU3V.NTx86]
+CopyFiles=IpxU3V.Files.Ext
+AddReg=IpxU3V.AddReg
+
+[IpxU3V.NTx86.HW]
+AddReg=IpxU3V.AddReg.Guid
+
+[IpxU3V.NTx86.Services]
+Addservice = IPXU3,2,IpxU3V.AddService
+
+[IpxU3V.NTamd64]
+CopyFiles=IpxU3V.Files.Ext
+AddReg=IpxU3V.AddReg
+
+[IpxU3V.NTamd64.HW]
+AddReg=IpxU3V.AddReg.Guid
+
+[IpxU3V.NTamd64.Services]
+Addservice = IPXU3,2,IpxU3V.AddService
+
+[IpxU3V.AddReg]
+; Deprecating - do not use in new apps to identify a IPXU3 driver
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,IPXU3V.sys
+; You may optionally include a check for DriverBase in your application to check for a IPXU3 driver
+HKR,,DriverBase,,IPXU3V.sys
+HKR,"Parameters","MaximumTransferSize",0x10001,4096
+HKR,"Parameters","DebugLevel",0x10001,2
+HKR,,FriendlyName,,%IPXU3_Description%
+
+[IpxU3V.AddService]
+DisplayName    = %IPXU3_Description%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\IPXU3V.sys
+AddReg         = IpxU3V.AddReg
+LoadOrderGroup = Base
+
+[IpxU3V.Files.Ext]
+IPXU3V.sys
+
+[IpxU3V.AddReg.Guid]
+HKR,,DriverGUID,,%IPXU3.GUID%
+
+;-------------- WDF Coinstaller installation
+[SourceDisksFiles]
+WdfCoInstaller01007.dll=1 ; make sure the number matches with SourceDisksNames
+
+[DestinationDirs]
+CoInstaller_CopyFiles = 11
+
+[IpxU3V.NTamd64.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[IpxU3V.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01007.dll
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01007.dll,WdfCoInstaller"
+
+[IpxU3V.NTamd64.Wdf]
+KmdfService = IPXU3, IpxU3V_wdfsect
+
+[IpxU3V.NTx86.Wdf]
+KmdfService = IPXU3, IpxU3V_wdfsect
+
+[IpxU3V_wdfsect]
+KmdfLibraryVersion = 1.7
+
+
+[Strings]
+IPXU3_Provider    = "Imperx Inc."
+IPXU3_Description = "Imperx USB3 Vision Driver"
+IPXU3_DisplayName = "Imperx USB3 Vision Camera"
+IPXU3_Install     = "Imperx USB3.0 Driver Installation Disk"
+VID_2DB2&PID_0000.DeviceDesc="Imperx Bobcat U3V [Legacy]"
+VID_2DB2&PID_0100.DeviceDesc="Imperx Cheetah U3V"    
+VID_2DB2&PID_0200.DeviceDesc="Imperx Cheetah U3V" 
+VID_2DB2&PID_0300.DeviceDesc="Imperx Cheetah U3V"    
+VID_2DB2&PID_0400.DeviceDesc="Imperx Tiger U3V [xx50]"     
+VID_2DB2&PID_0500.DeviceDesc="Imperx Tiger U3V [47M]"      
+VID_2DB2&PID_0600.DeviceDesc="Imperx Cheetah U3V [Pregius]
+VID_2DB2&PID_0700.DeviceDesc="Imperx Puma U3V [EMCCD]"     
+VID_2DB2&PID_0800.DeviceDesc="Imperx Tiger U3V [Aero xx50]"
+VID_2DB2&PID_0900.DeviceDesc="Imperx Tiger U3V [Aero 47M]" 
+VID_2DB2&PID_FF00.DeviceDesc="Imperx U3V Bootloader"       
+
+IPXU3.GUID="{FF958AFD-FCE7-4264-994C-8FA230D5A524}"
+;IPXU3_Unused      = "."
