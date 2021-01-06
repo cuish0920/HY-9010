@@ -106,7 +106,7 @@
   },
   "dependencies": {
     "HY_9010_T": "file:../HY_9010_T",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "echarts": "^4.7.0",
     "element-ui": "^2.13.0",
     "sqlite3": "^4.1.1",
