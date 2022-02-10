@@ -157,7 +157,7 @@
     "node-gyp": "^6.1.0",
     "node-loader": "^0.6.0",
     "node-pre-gyp": "^0.14.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "require-dir": "^1.2.0",
     "sass-loader": "^8.0.2",
     "spectron": "^10.0.1",
